@@ -40,8 +40,10 @@ jobs:
           set -euo pipefail
           f="Formula/apple-smi.rb"
 
-          perl -pi -e 's/^(\s*version\s+").*(")/$1${{ steps.meta.outputs.version }}$2/' "$f"
-          perl -pi -e 's/^(\s*sha256\s+").*(")/$1${{ steps.meta.outputs.sha }}$2/' "$f"
+          perl -pi -e 's/^(\s*version\s+").*(")/${1}${{ steps.meta.outputs.version }}${2}/' "$f"
+          perl -pi -e 's/^(\s*sha256\s+").*(")/${1}${{ steps.meta.outputs.sha }}${2}/' "$f"
+
+          ruby -c "$f"
 
       - name: Commit & push if changed
         run: |
