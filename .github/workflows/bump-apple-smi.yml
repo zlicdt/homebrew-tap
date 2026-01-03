@@ -2,7 +2,7 @@ name: bump apple-smi
 
 on:
   schedule:
-    - cron: "23 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch: {}
 
 permissions:
