@@ -7,9 +7,9 @@ class AppleSmi < Formula
     odie "apple-smi only supports Apple Silicon Macs"
   end
 
-  version "1.4.1"
+  version "1.4.2"
   url "https://github.com/zlicdt/apple-smi/releases/download/v#{version}/apple-smi", using: :nounzip
-  sha256 "2e2a0c8275fd42b109d3464ce310ea5c1761643bbb655b94f52ff79b448d15c3"
+  sha256 "df78b1b5ba3e6c51fdf85e71fc7e124a114aa7f88e78999850654934572d6c28"
 
   def install
     bin.install "apple-smi"
